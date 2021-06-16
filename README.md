@@ -5,7 +5,7 @@ Cristian Montejano
 
 Hello and welcome to my PuppyGram app!
 
-This app uses the public Flickr api and gets the latest posts tageed with "puppy" and displays them in a scrollable GridView! You can also click on a container in the grid to get more details about the post.
+This app uses the public Flickr api and gets the latest posts tagged with "puppy" and displays them in a scrollable GridView! You can also click on a container in the grid to get more details about the post.
 
 API: https://api.flickr.com/services/feeds/photos_public.gne?tags=puppy&format=json&nojsoncallback=1
 
