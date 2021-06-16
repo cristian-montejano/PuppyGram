@@ -3,6 +3,10 @@ package com.example.puppygram
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
+import androidx.core.os.bundleOf
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.puppygram.adapters.PostsAdapter
@@ -47,5 +51,14 @@ class MainActivity : AppCompatActivity(), PostsAdapter.OnItemClickListener {
 
     override fun onPostItemClicked(post: Post) {
         Log.i("post", "${post.title} clicked")
+        launchPostDetailsFragment(post)
+    }
+
+    private fun launchPostDetailsFragment(post: Post) {
+        val fm = supportFragmentManager
+        fm.beginTransaction()
+            .replace(R.id.post_details_fragment_view, PostDetailsFragment.newInstance(post))
+            .addToBackStack(null)
+            .commit()
     }
 }
