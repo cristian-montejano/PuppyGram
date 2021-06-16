@@ -1,5 +1,7 @@
 package com.example.puppygram.models
 
+import java.io.Serializable
+
 data class Post(
 
     val title: String,
@@ -11,7 +13,7 @@ data class Post(
     val author: String,
     val author_id: String,
     val tags: String
-)
+) : Serializable
 
 data class Media(
     val m: String
