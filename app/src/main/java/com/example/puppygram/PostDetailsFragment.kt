@@ -34,17 +34,6 @@ class PostDetailsFragment : Fragment(R.layout.post_details_fragment) {
 
     }
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val post = arguments?.get("post")
-        post?.let {
-            //bindPostDetails(it as Post)
-        } ?: run {
-            Toast.makeText(context, "Error showing post details", Toast.LENGTH_SHORT).show()
-        }
-    }
-
     private fun bindPostDetails(view: View, post: Post) {
         val image: ImageView = view.findViewById(R.id.post_image)
         val title: TextView = view.findViewById(R.id.post_title)
